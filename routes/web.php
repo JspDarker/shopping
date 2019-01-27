@@ -6,7 +6,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::view('open', 'shop.index');
+//Route::view('open', 'shop.index');
+Route::get('open', 'HomePageController@index')->name('home.index');
     // @get products and
     // @categories(sidebar)
     // @breacums
