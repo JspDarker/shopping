@@ -12,4 +12,6 @@ composer require barryvdh/laravel-debugbar --dev    # i debugbar
     php artisan make:seed ProductsTableSeeder
 # format datetime
     ## link: https://www.startutorial.com/articles/view/master-php-datetime
+
+<base href="{{ url('') }}">    
 ```

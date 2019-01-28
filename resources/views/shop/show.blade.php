@@ -1,15 +1,14 @@
 @extends('layouts.master')
 
-@section('title', 'Shop')
+@section('title', 'Shop{product}')
 
 @section('content')
     <div class="col-sm-8 blog-content">
         <div class="blog-posts">
             <div class="isotope row">
-                @foreach($products as $product)
                     <div class="col-md-6 col-sm-12 grid-view-post">
                         <div class="post">
-                            <figure class="main"><a href="{{ route('shopping.show', $product->slug) }}"><img src="{{ url('hot/products/'.$product->slug.'.jpg') }}" alt="{{ $product->name }}" title="{{ $product->name }}" /></a></figure>
+                            <figure class="main"><a href="blog-post.html"><img src="{{ url('hot/products/'.$product->slug.'.jpg') }}" alt="{{ $product->name }}" title="{{ $product->name }}" /></a></figure>
                             <div class="box text-center">
                                 <div class="category cat12"><span><a href="#">Add to Cart</a></span></div>
                                 <h4 class="post-title"><a href="blog-post.html">{{ $product->name }}</a></h4>
@@ -21,7 +20,6 @@
                         </div>
                     </div>
                     <!-- /column -->
-                @endforeach
             </div>
             <!-- /.isotope -->
 
