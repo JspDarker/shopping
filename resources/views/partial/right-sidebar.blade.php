@@ -1,6 +1,10 @@
 <aside class="col-sm-4 sidebar">
     <div class="sidebox widget">
-        <h3 class="widget-title">Search</h3>
+        <h3 class="widget-title">Search| Cart
+            @if(Cart::count() > 0)
+                <span class="text-danger alert alert-success">Cart(s) {{ Cart::count() }}</span>
+            @endif
+        </h3>
         <form class="searchform" method="get">
             <input type="text" id="s1" name="s" value="Search something" onfocus="this.value=''" onblur="this.value='Search something'">
             <button type="submit" class="btn btn-default">Find</button>

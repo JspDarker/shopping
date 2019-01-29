@@ -13,5 +13,12 @@ composer require barryvdh/laravel-debugbar --dev    # i debugbar
 # format datetime
     ## link: https://www.startutorial.com/articles/view/master-php-datetime
 
-<base href="{{ url('') }}">    
+<base href="{{ url('') }}">
+
+print number_format( 1234567, 2, ",", "." );
+// 1.234.567,00  
+
+using shoppingcart
+https://github.com/Crinsane/LaravelShoppingcart  
+https://github.com/hardevine/LaravelShoppingcart up5.7
 ```
