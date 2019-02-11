@@ -67,11 +67,11 @@
                     <li><a href="blog-post2.html">Blog Post No Sidebar</a></li>
                 </ul>
             </li>
-            <li class="dropdown"><a href="#" class="dropdown-toggle js-activated" data-toggle="dropdown">Pages <span class="caret"></span></a>
+            <li class="dropdown"><a href="#" class="dropdown-toggle js-activated" data-toggle="dropdown">Shop <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                    <li><a href="about.html">About 1</a></li>
-                    <li><a href="about2.html">About 2</a></li>
-                    <li><a href="services.html">Services</a></li>
+                    <li><a href="{{ route('home.index') }}">Home</a></li>
+                    <li><a href="{{ route('shopping') }}">Shopping</a></li>
+                    <li><a href="{{ route('cart.index') }}">Your Cart</a></li>
                     <li><a href="contact.html">Contact 1</a></li>
                     <li><a href="contact2.html">Contact 2</a></li>
                 </ul>

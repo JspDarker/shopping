@@ -20,7 +20,7 @@
                                             <button type="submit" class="btn btn-orange">Add to Cart</button>
                                         </form>
                                 </div>
-                                <h4 class="post-title"><a href="blog-post.html">{{ $product->name }}</a></h4>
+                                <h4 class="post-title"><a href="{{ route('shopping.show', $product->slug) }}">{{ $product->name }}</a></h4>
                                 <h5 style="color: red">{{ $product->presentPrice() }}</h5>
                                 <div class="meta"><span class="date">{{ (new DateTime($product->created_at))->format('j F Y') }}</span><span class="comments"><a href="#"><i class="icon-chat-1"></i> 15</a></span></div>
                                 <p>{{ $product->details }}</p>

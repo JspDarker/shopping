@@ -90,11 +90,16 @@ class CartController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param $rowId
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($rowId)
     {
-        //
+        $product = Cart::get($rowId);
+        if ($product->id != null) {
+            Cart::remove($rowId);
+            return response(['status_code' => 200,'name' => $product->name]);
+        }
+        return back()->with('msg_success', 'item can\'t remove');
     }
 }
