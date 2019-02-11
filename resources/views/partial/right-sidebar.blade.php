@@ -2,7 +2,7 @@
     <div class="sidebox widget">
         <h3 class="widget-title">Search| Cart
             @if(Cart::count() > 0)
-                <span class="text-danger alert alert-success">Cart(s) {{ Cart::count() }}</span>
+                <span class="text-danger total-products">{{ Cart::count() }}</span>
             @endif
         </h3>
         <form class="searchform" method="get">

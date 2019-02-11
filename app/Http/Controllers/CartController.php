@@ -98,7 +98,13 @@ class CartController extends Controller
         $product = Cart::get($rowId);
         if ($product->id != null) {
             Cart::remove($rowId);
-            return response(['status_code' => 200,'name' => $product->name]);
+
+            return response([
+                'status_code' => 200,
+                'name' => $product->name,
+                'slug' => $product->slug,
+                'count'=> Cart::count()
+            ]);
         }
         return back()->with('msg_success', 'item can\'t remove');
     }
