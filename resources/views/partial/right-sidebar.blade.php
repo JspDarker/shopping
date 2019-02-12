@@ -1,9 +1,9 @@
 <aside class="col-sm-4 sidebar">
     <div class="sidebox widget">
         <h3 class="widget-title">Search| Cart
-            @if(Cart::count() > 0)
-                <span class="text-danger total-products">{{ Cart::count() }}</span>
-            @endif
+            {{--@if(Cart::count() > 0)--}}
+                <span style="background-color: hotpink" class="text-danger badge total-products">{{ Cart::instance('default')->count() }}</span>
+            {{--@endif--}}
         </h3>
         <form class="searchform" method="get">
             <input type="text" id="s1" name="s" value="Search something" onfocus="this.value=''" onblur="this.value='Search something'">

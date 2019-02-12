@@ -21,4 +21,5 @@ print number_format( 1234567, 2, ",", "." );
 using shoppingcart
 https://github.com/Crinsane/LaravelShoppingcart  
 https://github.com/hardevine/LaravelShoppingcart up5.7
+link https://css-tricks.com/number-increment-buttons/
 ```

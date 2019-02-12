@@ -103,7 +103,7 @@ class CartController extends Controller
                 'status_code' => 200,
                 'name' => $product->name,
                 'slug' => $product->slug,
-                'count'=> Cart::count()
+                'count'=> Cart::instance('default')->count()
             ]);
         }
         return back()->with('msg_success', 'item can\'t remove');

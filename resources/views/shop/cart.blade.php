@@ -11,10 +11,8 @@
                 </div>
             @endif
             <div class="isotope row">
-                @if(Cart::count() > 0)
-                    <h2><span class="text-danger total-products">{{ Cart::count() }}</span> Product(s) in cart</h2>
-                @else
-                    <h2>No item in this cart</h2>
+                    <h2><span style="background-color: hotpink" class="badge total-products">{{ Cart::instance('default')->count() }}</span> Product(s) in cart</h2>
+                @if(Cart::count() === 0)
                     <a class="btn-aqua btn" href="{{ route('home.index') }}">Continue shopping...</a>
                 @endif
             </div>
@@ -88,10 +86,8 @@
                         hideItem(data_request['data_this'],data_request['data_el']);
 
                         // update qty all
-                        if (data.count > 0)
-                            $('.total-products').html(data.count);
-                        else {
-                            $('.total-products').html('');
+                        $('.total-products').html(data.count);
+                        if (data.count === 0) {
                             $('.display-message-default').show();
                         }
                         // update total price
